@@ -51,7 +51,7 @@ class Capturer(threading.Thread):
             p.open_live(dev, 65535, 0, 100)
             p.setfilter(string.join(sys.argv[2:],' '), 0, 0)
             logging.debug("Started packet capture module: Listening on {}: net={}, mask={}".format(dev, net, mask))
-        except Exception, e:
+        except Exception as e:
             print("Started packet capture module: open_live() failed for device='{}'. Error: {}".format(dev, str(e)))
 
         try:

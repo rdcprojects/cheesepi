@@ -39,7 +39,7 @@ class DAO_mysql(dao.DAO):
 		except:
 			msg = "Error: Connection to MySQL database failed! Ensure MySQL is running."
 			logging.error(msg)
-			print msg
+			print(msg)
 			exit(1)
 
 		if not self.conn:
